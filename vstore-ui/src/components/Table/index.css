@@ -1,0 +1,42 @@
+
+.table > tbody > tr:hover {
+     background: #fafafa;
+}
+
+
+.table-wrapper{
+
+}
+.table-wrapper::before {
+     /*display: table;*/
+     /*content: '';*/
+}
+
+
+.spin-nested-loading {
+     position: relative;
+}
+
+.spin-blur {
+     clear: both;
+     overflow: hidden;
+     opacity: 0.5;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     pointer-events: none;
+}
+
+.spin-container {
+     position: relative;
+     transition: opacity 0.3s;
+}
+
+.spin-dot{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     z-index: 1000;
+     margin: -10px;
+}

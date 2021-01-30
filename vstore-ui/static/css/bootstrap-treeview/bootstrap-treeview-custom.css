@@ -1,0 +1,114 @@
+/* =========================================================
+ * bootstrap-treeview.css v1.2.0
+ * =========================================================
+ * Copyright 2013 Jonathan Miles
+ * Project URL : http://www.jondmiles.com/bootstrap-treeview
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================= */
+
+
+.treeview span.icon {
+	width: 16px;
+	margin-right: 5px;
+}
+
+.glyphicon {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.file-earmark{
+	background-image: url(file-earmark.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.file-earmark-check{
+	background-image: url(file-earmark-check.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.dash-square{
+	background-image: url(dash-square.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.plus-square{
+	background-image: url(plus-square.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+
+.file-text{
+	background-image: url(file-text.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.folder2-open{
+	background-image: url(folder2-open.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.check-square{
+	background-image: url(check-square.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.square{
+	background-image: url(square.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.check-square-fill{
+	background-image: url(check-square-fill.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+.caret-down-fill{
+	background-image: url(caret-down-fill.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+
+.caret-right-fill{
+	background-image: url(caret-right-fill.svg);
+	width: 1rem ;
+	height:1rem;
+}
+
+
+.list-group-item {
+	position: relative;
+	display: block;
+	padding: .25rem 1.25rem;
+	font-size: 14px;
+	font-variant: tabular-nums;
+	background-color: #fff;
+	border: 0px solid rgba(0,0,0,.125);
+}

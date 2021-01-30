@@ -1,0 +1,14 @@
+spring:
+  freemarker:
+    suffix: .ftl
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/vstore?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+
+mybatis:
+  type-aliases-package: com.vstore.dao
+  mapper-locations: classpath:mapper/*.xml
+  type-handlers-package:
+  configuration:
+    map-underscore-to-camel-case: true

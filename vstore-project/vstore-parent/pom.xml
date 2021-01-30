@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>vstore-dependencies</artifactId>
+        <groupId>com.vstore</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../vstore-dependencies</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>vstore-parent</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <vstore-version>0.0.1-SNAPSHOT</vstore-version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-web</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-log4j2</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-mybatis</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-freemarker</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-tests</artifactId>
+                <scope>test</scope>
+                <version>${vstore-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-oauth2</artifactId>
+
+                <version>${vstore-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-starter-security</artifactId>
+
+                <version>${vstore-version}</version>
+            </dependency>
+
+            <!-- framework-->
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-framework-base</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-framework-file</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-boot-autoconfigure</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-framework-ai</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.vstore</groupId>
+                <artifactId>vstore-framework-search</artifactId>
+                <version>${vstore-version}</version>
+            </dependency>
+
+
+
+
+        </dependencies>
+    </dependencyManagement>
+</project>

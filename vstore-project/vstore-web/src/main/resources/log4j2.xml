@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration >
+
+    <Properties>
+        <Property name="filePath">target/logs/eam</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- logger.info\logger.debug\logger.trace   -->
+        <RollingRandomAccessFile name="infoFile" fileName="${filePath}/info.log"
+                                 filePattern="${filePath}/%d{yyyyMMdd}/info.log">
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout charset="UTF-8"  >
+                <Pattern>%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <!-- logger.warn\logger.error   -->
+        <RollingRandomAccessFile  name="errorFile" fileName="${filePath}/error.log"
+                                  filePattern="${filePath}/%d{yyyyMMdd}/error.log">
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout charset="UTF-8"  >
+                <Pattern>%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <!-- accessLog   -->
+        <RollingRandomAccessFile name="accessFile"
+                                 fileName="${filePath}/access.log"
+                                 filePattern="${filePath}/%d{yyyyMMdd}/access.log">
+            <PatternLayout charset="UTF-8"  >
+                <Pattern>%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <!-- dubbo  -->
+        <RollingRandomAccessFile name="dubboFile" fileName="${filePath}/dubbo.log"
+                                 filePattern="${filePath}/%d{yyyyMMdd}/dubbo.log">
+            <PatternLayout charset="UTF-8"  >
+                <Pattern>%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <!-- other -->
+        <RollingRandomAccessFile name="otherFile" fileName="${filePath}/other.log"
+                                 filePattern="${filePath}/%d{yyyyMMdd}/other.log">
+            <PatternLayout charset="UTF-8"  >
+                <Pattern>%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <!-- console -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout charset="UTF-8"   pattern="%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n"/>
+        </Console>
+
+        <!-- all -->
+        <RollingRandomAccessFile name="All" fileName="${filePath}/all.log"
+                                 filePattern="${filePath}/%d{yyyyMMdd}/all.log">
+            <PatternLayout charset="UTF-8"  >
+                <Pattern>%d{HH:mm:ss.SSS} [%t]-[%X{uuid}]- %-5level %l  - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>
+
+
+
+    </Appenders>
+    <Loggers>
+
+
+        <Logger name="com.vstore" level="DEBUG" additivity="false">
+            <appenderRef ref="errorFile" />
+            <appenderRef ref="infoFile" />
+            <appenderRef ref="All" />
+            <appenderRef ref="console" />
+        </Logger>
+
+
+        <Root level="INFO" additivity="false">
+            <appenderRef ref="otherFile" />
+            <appenderRef ref="All" />
+            <appenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>

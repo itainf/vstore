@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>vstore-boot</artifactId>
+        <groupId>com.vstore</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../vstore-boot</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <artifactId>vstore-boot-starter</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>vstore-boot-starter-mybatis</module>
+        <module>vstore-boot-starter-web</module>
+        <module>vstore-boot-starter-log4j2</module>
+        <module>vstore-boot-starter-tests</module>
+        <module>vstore-boot-starter-oauth2</module>
+        <module>vstore-boot-starter-security</module>
+
+    </modules>
+
+
+</project>
