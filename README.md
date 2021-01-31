@@ -1,5 +1,5 @@
-[[ 前言\]]: https://zhuanlan.zhihu.com/p/348214235	"前言"
-[[SpringSecurity技术介绍\]]: https://zhuanlan.zhihu.com/p/348243780	"SpringSecurity技术介绍"
+[前言]: https://zhuanlan.zhihu.com/p/348214235	"前言"
+[SpringSecurity技术介绍]: https://zhuanlan.zhihu.com/p/348243780	"SpringSecurity技术介绍"
 
 ### 项目结构介绍
 
